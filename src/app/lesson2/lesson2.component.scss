@@ -1,0 +1,148 @@
+.container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: Arial, Helvetica, sans-serif;
+
+   header {
+      width: 100%;
+      height: 75px;
+      background-color: rgb(243, 240, 240);
+      border-bottom: 2px solid rgb(192, 191, 191);
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+   }
+
+   .data {
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin: 30px 0;
+
+      &-write {
+         width: 440px;
+      }
+
+      &-display {
+         width: 540px;
+      }
+   }
+
+   .inputField {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      border: 2px solid rgb(197, 195, 195);
+      border-radius: 3px;
+      margin-bottom: 10px;
+      &:focus {
+         border-color: rgb(120, 173, 243);
+         box-shadow: 0 0 3px 3px rgb(172, 220, 252);
+      }
+   }
+
+   .saveBtn {
+      width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      color: white;
+      background-color: rgb(63, 163, 245);
+      &:hover{
+         background-color: rgb(58, 144, 214);
+      }
+      &:focus{
+         box-shadow: 0 0 3px 3px rgb(63, 163, 245);
+      }
+   }
+   .addBtn {
+      width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      color: white;
+      background-color: rgb(61, 192, 72);
+      &:hover{
+         background-color: rgb(50, 158, 59);
+      }
+      &:focus{
+         box-shadow: 0 0 3px 3px rgb(61, 192, 72);
+      }
+   }
+
+   p {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+   }
+   table{
+      border-top: 2px solid rgb(235, 232, 232);
+      width: 100%;
+      margin-top: 30px;
+      text-align: left;
+   }
+   th{
+      min-width: 20px;
+      height: 50px;
+      padding: 10px 0;
+      border-bottom: 2px solid rgb(197, 195, 195);
+      &:nth-child(1){
+         width: 5%;
+      }
+      &:nth-child(2){
+         width: 20%;
+      }
+      &:nth-child(3){
+         width: 18%;
+      }
+      &:nth-child(4){
+         width: 27%;
+      }
+      &:nth-child(5){
+         width: 15%;
+      }
+      &:nth-child(6){
+         width: 15%;
+      }
+   }
+
+   td{
+      min-width: 20px;
+      border-bottom: 2px solid rgb(235, 232, 232);
+      height: 60px;
+      border-collapse: collapse;
+      
+      .editBtn{
+         width: 60px;
+         height: 40px;
+         background-color: rgb(230, 179, 13);
+         border-radius: 3px;
+         &:hover{
+            background-color: rgb(197, 155, 16);
+         }
+         &:focus{
+            box-shadow: 0 0 3px 3px rgb(230, 179, 13);
+         }
+      }
+      .deleteBtn{
+         width: 80px;
+         height: 40px;
+         background-color: rgb(182, 5, 5);
+         color: white;
+         border-radius: 3px;
+         &:hover{
+            background-color: rgb(145, 8, 8);
+         }
+         &:focus{ 
+            box-shadow: 0 0 3px 3px rgb(182, 5, 5);
+         }
+      }
+   }
+   .red{
+      border: 1px solid red;
+   }
+   
+}

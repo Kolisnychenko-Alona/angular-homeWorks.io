@@ -1,0 +1,48 @@
+<div class="container">
+   <header>Angular users tasks</header>
+   <div class="data">
+      <section class="data-write">
+         <form>
+            <p>Login</p>
+            <div><input type="text" [class]="inputField" [(ngModel)]="login"  name="login" placeholder="Enter login"></div>
+            <p>Password</p>
+            <div><input type="password" [class]="inputField" [(ngModel)]="password" name="password" placeholder="Enter password"></div>
+            <p>Email address</p>
+            <div><input type="email" [class]="inputField" [(ngModel)]="email" name="email" placeholder="Enter email"></div>
+            <div class="btn">
+               <ng-container *ngIf="isEdit; else elseTemplate">
+                  <input type="button" class="saveBtn" (click)="saveEditUser()" value="Save edit user">
+               </ng-container>          
+            </div>
+            <ng-template #elseTemplate>
+               <input type="button" class="addBtn" (click)="addUser()" value="Add user" >
+            </ng-template>
+         </form>
+      </section>
+      <section class="data-display">
+         <table cellspacing="0">
+            <thead>
+               <tr>
+                  <th>#</th>
+                  <th>Login</th>
+                  <th>Password</th>
+                  <th>Email</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+               </tr>
+            </thead>
+               <tbody *ngFor="let user of users; index as i">
+                  <tr>
+                     <td>{{i+1}}</td>
+                     <td>{{user.login}}</td>
+                     <td>{{user.password}}</td>
+                     <td>{{user.email}}</td>
+                     <td><button class="editBtn" (click)="editUser(i)">Edit</button></td>
+                     <td><button class="deleteBtn" (click)="deleteUser(i)">Delete</button></td>
+                  </tr>
+               </tbody>
+         </table>
+      </section>
+   </div>
+</div>
+

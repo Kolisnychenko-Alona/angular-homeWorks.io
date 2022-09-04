@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CenzorComponent } from './cenzor.component';
+import { Lesson2Component } from './lesson2.component';
 
-describe('CenzorComponent', () => {
-  let component: CenzorComponent;
-  let fixture: ComponentFixture<CenzorComponent>;
+describe('Lesson2Component', () => {
+  let component: Lesson2Component;
+  let fixture: ComponentFixture<Lesson2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CenzorComponent ]
+      declarations: [ Lesson2Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CenzorComponent);
+    fixture = TestBed.createComponent(Lesson2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

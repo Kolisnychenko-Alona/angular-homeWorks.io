@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { __values } from 'tslib';
 
 @Component({
-  selector: 'app-cenzor',
-  templateUrl: './cenzor.component.html',
-  styleUrls: ['./cenzor.component.scss']
+  selector: 'app-lesson1',
+  templateUrl: './lesson1.component.html',
+  styleUrls: ['./lesson1.component.scss']
 })
-export class CenzorComponent implements OnInit {
+export class Lesson1Component implements OnInit {
+  
   public words = 'java';
   public input = 'input-field';
   public inputPlaceholder = 'word here...';
@@ -23,7 +23,6 @@ export class CenzorComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   showWordsList(): string{
     return this.words;
   }
