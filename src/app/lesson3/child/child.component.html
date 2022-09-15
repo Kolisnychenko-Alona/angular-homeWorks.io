@@ -15,7 +15,7 @@
       <td>{{task.name}}</td>
       <td><input type="checkbox" [(ngModel)]="task.checked" (change)="doneTask(i)"></td>
       <td><ng-container *ngIf="!task.checked; else elseTemplate">
-          <span style="color:red">in PROGRESS</span>
+          <span style="color:red">In PROGRESS</span>
         </ng-container>
         <ng-template #elseTemplate>
           <span style="color:green">Done</span>
