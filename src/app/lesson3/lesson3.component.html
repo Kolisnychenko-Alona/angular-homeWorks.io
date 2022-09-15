@@ -1,0 +1,20 @@
+<div class="all">
+   <div class="container">
+      <h1>Plan your day</h1>
+      <h2>User: Ivan Ivanov. Count of Tasks {{tasks.length}}</h2>
+      <div class="input">
+         <input type="text" [(ngModel)]="name" name="name">
+         <button (click)="addTask()">Add</button>
+      </div>
+      <app-child [tasks]="tasks" (isDone)="getStatus($event)" (edit)="editTask($event)" (delete)="deleteTask($event)"></app-child>
+      <ng-container *ngIf="isEdit">
+         <div class="edit">
+            <input type="text" [(ngModel)]="editName" name="editName">
+            <button (click)="saveName()">save</button>
+         </div>
+      </ng-container>
+      
+   </div>
+</div>
+
+

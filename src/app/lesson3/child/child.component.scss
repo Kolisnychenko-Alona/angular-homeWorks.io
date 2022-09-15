@@ -1,0 +1,65 @@
+table {
+   width: 100%;
+   text-align: left;
+}
+th {
+   min-width: 20px;
+   height: 50px;
+   padding: 10px;
+   border-bottom: 1px solid rgb(197, 195, 195);
+   &:nth-child(1) {
+      width: 5%;
+   }
+   &:nth-child(2) {
+      width: 20%;
+   }
+   &:nth-child(3) {
+      width: 15%;
+   }
+   &:nth-child(4) {
+      width: 25%;
+   }
+   &:nth-child(5) {
+      width: 17%;
+   }
+   &:nth-child(6) {
+      width: 17%;
+   }
+}
+
+td {
+   min-width: 20px;
+   padding: 10px;
+   border-bottom: 2px solid rgb(235, 232, 232);
+   height: 60px;
+   border-collapse: collapse;
+
+   .editBtn {
+      width: 60px;
+      height: 40px;
+      background-color: rgb(230, 179, 13);
+      border-radius: 3px;
+      &:hover {
+         background-color: rgb(197, 155, 16);
+      }
+      &:focus {
+         box-shadow: 0 0 3px 3px rgb(230, 179, 13);
+      }
+   }
+   .deleteBtn {
+      width: 80px;
+      height: 40px;
+      background-color: rgb(182, 5, 5);
+      color: white;
+      border-radius: 3px;
+      &:hover {
+         background-color: rgb(145, 8, 8);
+      }
+      &:focus {
+         box-shadow: 0 0 3px 3px rgb(182, 5, 5);
+      }
+   }
+   .disabled{
+      background-color: rgb(187, 84, 84) ;
+   }
+}
