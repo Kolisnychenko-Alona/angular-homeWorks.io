@@ -1,0 +1,63 @@
+<div class="phone-book">
+  <h1>My phone book!</h1>
+  <div class="phone-book-search">
+    <input type="text" class="phone-book-search-field" [(ngModel)]="searchContact" placeholder="search text goes here"/>
+    <button class="add-contact-btn" (click)="addContact()" >add phone</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+         <th>
+            <button (click)="sort('fN')">First name 
+               <i class="uil uil-angle-down" *ngIf="ascFN"></i>
+               <i class="uil uil-angle-up" *ngIf="descFN"></i>
+            </button>
+         </th>
+         <th>
+            <button (click)="sort('lN')">Last name 
+               <i class="uil uil-angle-down" *ngIf="ascLN"></i>
+               <i class="uil uil-angle-up" *ngIf="descLN"></i>
+            </button>
+         </th>
+        <th>
+            <button (click)="sort('phone')">Number
+               <i class="uil uil-angle-down" *ngIf="ascPH"></i>
+               <i class="uil uil-angle-up" *ngIf="descPH"></i>
+            </button>
+        </th>
+        <th>edit</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of phoneBook | search: searchContact | sort:type:column ; index as i">
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+        <td>{{ contact.phone }}</td>
+        <td><button class="edit-btn" (click)="editContact(i)">edit</button></td>
+        <td><button class="delete-btn" (click)="deleteContact(i)">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal" *ngIf="addEdit">
+      <div class="modal-box">
+         <header>
+            <h2>Add phone</h2>
+            <button (click)="close()"><i class="uil uil-times"></i></button>
+         </header>
+         <section>
+            <input type="text" [(ngModel)]="firstName" placeholder="firs name goes here">
+            <input type="text" [(ngModel)]="lastName" placeholder="second name goes here">
+            <input type="text" [(ngModel)]="phone" placeholder="number phone goes here">
+         </section>
+         <footer>
+            <ng-container *ngIf="saveAdd; else elseTemplate">
+               <button (click)="saveContact()">Save</button>
+            </ng-container>
+            <ng-template #elseTemplate>
+               <button (click)="saveEditContact()">Save</button>
+            </ng-template>
+         </footer>
+      </div>
+  </div>
